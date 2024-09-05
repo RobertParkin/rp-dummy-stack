@@ -13,3 +13,8 @@ use_cases:
         widget: simple_text
         type: string
         default: "hello world and especially to ($ .organization_canonical $)"
+      - widget: "dropdown"
+        type: "map"
+        key: "interpolated_values_ref"
+        name: "Inventory test"
+        values_ref: "https://devs-testing-bucket.s3.eu-west-1.amazonaws.com/backend/values_ref.json?owner=($ project_owner_canonical $)"
